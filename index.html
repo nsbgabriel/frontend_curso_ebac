@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comparação dos números</h1>
+    <form id="form">
+        <label>Campo A</label>
+        <input id="number1" type="number" required placeholder="Digite um numero">
+        </br>
+        <label>Campo B</label>
+        <input id="number2" type="number" required placeholder="Digite outro numero">
+        </br>
+        <button type="submit" value="calcular">Submeter</button>
+    </form>
+    <p id="resultado">Resultado:</p>
+
+    <script>
+        var form = document.getElementById('form')
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            submeter();
+
+        })
+
+        function submeter() {
+            var number1 = document.getElementById('number1')
+            var number2 = document.getElementById('number2')
+            var num1 = Number(number1.value)
+            var num2 = Number(number2.value)
+            var resultado = document.getElementById('resultado')
+
+            if (num1 > num2) {
+                resultado.innerHTML = `Campo A é maior que campo B. Formulário inválido!`
+            } else {
+                resultado.innerHTML = `Campo B é maior que campo A. Formulário válido!`
+            }
+        }
+
+    </script>
+</body>
+</html>
