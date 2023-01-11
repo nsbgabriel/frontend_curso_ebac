@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+</head>
+<body>
+    <header>
+            <h1>Formulário de cadastro</h1>
+     </header>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Preencha os campos para realizar o cadastro</h2>
+            <form>
+                <div class="form-campo">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                <div class="form-campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone">
+                </div>
+                <div class="form-campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-campo">
+                    <label for="CPF">CPF:</label>
+                    <input type="text" id="CPF" name="CPF">
+                </div>
+                <div class="form-campo">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco">
+                </div>
+                <div class="form-campo">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script>
+    
+    $(document).ready(function() {
+        $('#telefone').mask('(00) 00000-0000')
+
+        $('#CPF').mask('000.000.000-00');
+
+        $('#cep').mask('00000-000');
+
+    })
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #192a56;
+            padding-top: 16px;
+            color: #fff;
+        }
+
+        .form-campo, .container h2,
+        header h1 {
+            margin-bottom: 16px;
+            margin-left: 16px;
+        }
+
+        .form-campo label {
+            font-weight: bold;
+            display: block;
+        }
+
+        .form-campo input {
+            width: 100%;
+            display: block;
+            padding: 8px;
+        }
+
+        form {
+            max-width: 360px;
+        }
+
+        form button {
+            max-width: 120px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 8px 0;
+            background-color: #119759;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-left: 16px;
+        }
+    </style>
+</body>
+</html>
