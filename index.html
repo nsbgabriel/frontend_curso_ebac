@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+    </header>
+    <form>
+        <input type="text" id="nova-tarefa" required placeholder="Digite a tarefa..."/>
+        <button type="submit">Cadastrar</button>
+    </form> 
+    <ul>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('form').on('submit', function(e) {
+            e.preventDefault();
+            const novaTarefa = $('#nova-tarefa').val();
+            const novoItem = $(`<li>${novaTarefa}</li>`);
+            
+            $(novoItem).appendTo('ul');
+            $(novoItem).fadeIn(1000);
+            $('item-lista').val('')
+
+            $('li').click(function() {
+                $(this).addClass('tarefa-completa');
+            });
+        })
+    })
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #ccc;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -110px;
+            margin-top: -40px;
+        }
+
+        header h1, form {
+            
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 250px;
+            height: 35px;
+        }
+
+        button {
+            width: 100px;
+            height: 35px;
+        }
+
+        .tarefa-completa {
+            text-decoration: line-through;
+        }
+
+    </style>
+</body>
+</html>
