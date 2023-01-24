@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote uma planta</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <style>
+        .conteudo {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            max-width: 100%;
+        }
+
+        .teste {
+            margin-top: 10px;
+        }
+
+        .conteudo .btn {
+            background-color: rgb(19, 97, 19);
+            color: #fff;
+        }
+
+        .carousel {
+            max-width: 100%;
+            max-height: 80%;
+        }
+
+        h1{
+            padding: 20px 0;
+            margin-bottom: 0;
+            text-align: center;
+            background-color: rgb(19, 97, 19);
+            color: #fff;
+        }
+
+        body {
+            background-color: rgb(19, 97, 19);
+        }
+    </style>
+</head>
+<body>
+    <h1>Planta faz isso?</h1>
+    <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ide="carousel">
+        <div class="carousel-inner">
+            <div data-bs-interval="1000" class="carousel-item active">
+                <img class="d-block w-100" src="/latino-plant-parent-holding-potted-alocasia.jpg">
+            </div>
+            <div data-bs-interval="1000" class="carousel-item">
+                <img class="d-block w-100" src="/woman-holding-a-potted-aloe-vera-succulent.jpg">
+            </div>
+            <div data-bs-interval="1000" class="carousel-item">
+                <img class="d-block w-100" src="/woman-unpacking-belongings.jpg">
+            </div>
+        </div>
+        <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+
+    <div class="conteudo">
+        <div class="row">
+            <div class="col-lg-4 col-xs-12 col-md-6 teste">
+                <div class="card">
+                    <img src="/beautiful-woman-works-in-a-garden-near-the-house.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Conheça nossa horta coletiva</h4>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus quidem vel porro. Molestias aut sunt quam amet ipsam modi suscipit ullam error eveniet dolorum dolore beatae, et obcaecati ipsum.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-12 col-md-6 teste">
+                <div class="card">
+                    <img src="/close-up-of-female-gardener-in-mask-picking-strawberries.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Hummmm moranguinho</h4>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus quidem vel porro. Molestias aut sunt quam amet ipsam modi suscipit ullam error eveniet dolorum dolore beatae, et obcaecati ipsum.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-12 col-md-6 teste">
+                <div class="card">
+                    <img src="/women-taking-care-of-their-plants-in-a-greenhouse.jpg" />
+                    <div class="card-body">
+                        <h4 class="card-title">Mudas de plantas à venda</h4>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus quidem vel porro. Molestias aut sunt quam amet ipsam modi suscipit ullam error eveniet dolorum dolore beatae, et obcaecati ipsum.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/bootstrap.bundle.min.js"></script>
+</body>
+</html>
